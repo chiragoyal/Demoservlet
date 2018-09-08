@@ -1,0 +1,13 @@
+import javax.servlet.*;
+import java.io.*;
+import javax.servlet.annotation.*;
+
+@WebServlet("/test");
+class FirstServlet implements GenericServlet
+{
+	public void service(ServletRequest req,ServletResponse res) throws ServletException, IOException 
+	{
+		PrintWriter pw=req.getWriter();
+		pw.println("<h1>Welcome</h1>");
+	}
+}
